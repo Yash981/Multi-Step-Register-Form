@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #121826;
+    background-image: url(./Images/blur-radial.svg),url(./Images/blur-radial.svg);
+    background-position:-62% 50%,150% -50%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width:400px;
+    height:375px;
+    background-color: #212936;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    gap:15px;
+    border:1px solid #4D5562;
+    /* box-shadow: 0px 0px 0px #4D5562; */
+    margin-left: auto;
+}
+form > #page1-h1{
+    color:#fff;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left ;
+    
+}
+.input-field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-field > input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+    background-color: transparent !important;
+    border:2px solid #4D5562;
+    color:#fff;
+}
+.input-field > ::-webkit-input-placeholder{
+    color:#4D5562;
+}
+.input-field > label{
+    color:#4D5562;
+}
+.input-field > input:focus{
+    border:2px solid #845EEE;
+}
+
+.submitButton{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.submitButton > button{
+    width:120px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #845EEE;
+    color:#fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter',sans-serif;
+}
+form > #page2-h1{
+    color:#fff;
+    font-size: 1rem;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.roleSelection{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.roleSelection > #option1,#option2,#option3{
+    width: 100%;
+    height: 40px;
+    background-color: #394150;
+    padding: 15px;
+    border-radius: 10px;
+    color:#A1A1A9;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border:1px solid #4D5562;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.option.selected{
+    background-color: #652CD1 !important;
+    color:#E5E7EB !important;
+    border: 1px solid #845EEE !important;
+}
+form > #page3-h1{
+    color:#E5E7EB;
+    font-size: 1rem;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.form1Details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color:#A1A1A9;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.form1Details > #username,#email{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.form2Details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color:#A1A1A9;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.form2Details > h2{
+    color:#A1A1A9;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form2Details > ul {
+    padding-left: 25px;
+}
+.form2Details > ul > li{
+    margin-bottom: 5px;
+    color: #E5E7EB;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+#summaryName,#summaryEmail{
+    color:#E5E7EB;
+    font-size: 1rem;
+    padding-left: 5px;
+    font-weight: 500;
+}
+.allFormsPaginations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap:20px;
+
+}
+.pagination > h5{
+    color:#4D5562;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Inter',sans-serif;
+}
+.paginationDots{
+    display: flex;
+}
+#dot1,#dot2,#dot3{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #394050;
+    
+}
+#dot1{
+    background-color: #652CD1;
+}
+#dot2.active{
+    background-color: #652CD1;
+}
+#dot1.selected,#dot2.selected,#dot3.selected{
+    background-color: #652CD1;
+    position: relative;
+}
+#dot1.selected::before,#dot2.selected::before,#dot3.selected::before{
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: #39405066;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form1" style="display:flex;" >
+        <h1 id="page1-h1">Register</h1>
+
+        <div class="input-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="inputVal" placeholder="enter your name" required />
+        </div>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="example@gmail.com"
+            id="email"
+            class="EmailVal"
+            required
+          />
+        </div>
+        <div class="submitButton">
+          <button type="button" onclick="showNextForm('form2')" id="submit-btn">Continue</button>
+        </div>
+      </form >
+      <form id="form2" style="display: none;">
+        <h1 id="page2-h1">Which topics you are interested in?</h1>
+        <div class="roleSelection">
+            <div class="option" id="option1" onclick="selectOption('option1')">Software Development</div>
+            <div class="option" id="option2" onclick="selectOption('option2')">
+                User Experience
+            </div>
+            <div class="option" id="option3" onclick="selectOption('option3')">
+                Graphic Design
+            </div>
+        </div>
+        <div class="submitButton">
+          <button type="button" id="submit-btn" onclick="showNextForm('form3')">Continue</button>
+        </div>
+
+      </form>
+      <form  id="form3" style="display: none;">
+        <h1 id="page3-h1">Summary</h1>
+        <div class="form1Details">
+            <div id="username">Name:<span id="summaryName"></span></div>
+            <div id="email">Email:<span id="summaryEmail"></span></div>
+        </div>
+        <div class="form2Details">
+            <h2>Topics</h2>
+            <ul id="selectedTopicsList">
+            </ul>
+        </div>
+        <div class="submitButton">
+            <button type="button" id="submit-btn" onclick="submitForm()">Confirm</button>
+          </div>
+      </form>
+      <div class="allFormsPaginations">
+        <div class="pagination">
+          <h5>Step <span id="pageNumber">1</span> of 3</h5>
+        </div>
+        <div class="paginationDots">
+          <div class="dot selected" id="dot1"></div>
+          <div class="dot" id="dot2"></div>
+          <div class="dot" id="dot3"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
